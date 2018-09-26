@@ -1,0 +1,50 @@
+﻿@model Teams.Models.InfoTeams
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal" >
+        <dt>
+            Team Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Team_name)
+        </dd>
+        <dt>
+            Coach Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Coach_name)
+        </dd>
+        <dt>
+            Maches Played
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Maches_Played)
+        </dd>
+        <dt>
+           Maches Lost
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Maches_Lost)
+        </dd>
+        <dt>
+            Maches Won
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Maches_Won)
+        </dd>
+     
+            
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Team_Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
